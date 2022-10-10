@@ -12,7 +12,18 @@ type ResultsPropsType = {
 
 const Results = (props: ResultsPropsType) =>{
     return(
-        <h1>気象データ{props.results.cityName}</h1>
+       <div>
+        {props.results.cityName && <div>{props.results.cityName}</div>}
+        {props.results.country && <div>{props.results.country}</div>}
+        {props.results.temperature && <div>{props.results.temperature}<span>℃</span></div>}
+        {props.results.conditionText && <div>
+            <img src={props.results.icon} alt="icon"/>
+            <span>{props.results.conditionText}</span>
+        
+            </div>}
+        {props.results.cityName && <div>{props.results.cityName}</div>}
+       </div>
+      
     );
 }
 
