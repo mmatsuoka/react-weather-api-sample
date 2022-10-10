@@ -9,7 +9,7 @@ const Form = (props:FormPropsType) => {
 
     return (
         <form>
-            <input type="text" name="city" placeholder="都市名"
+            <input type="text" name="city" placeholder="都市名を英語で入力"
             onChange={e=> props.setCity(e.target.value)}
             />
             <button type="submit" onClick={props.getWeather}>都市の天気予報を取得する。</button>

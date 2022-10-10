@@ -32,7 +32,7 @@ function App() {
 
       e.preventDefault();
 
-      fetch("https://api.weatherapi.com/v1/current.json?key=420a5465eb6f4f628e0141918220910&q=London&aqi=no")
+      fetch(`https://api.weatherapi.com/v1/current.json?key=420a5465eb6f4f628e0141918220910&q=${city}&aqi=no`)
       .then(response => response.json() )
       .then(data => setResults({
         country: data.location.country,
