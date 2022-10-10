@@ -1,7 +1,7 @@
 // Title.tsx
 
 const Title = () => {
-    return (<h1>天気予報</h1>);
+    return (<h1>世界の天気</h1>);
 }
 
 
