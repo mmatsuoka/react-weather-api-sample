@@ -28,7 +28,7 @@ function App() {
   /**
    * https://www.weatherapi.com/ が提供しているAPIから天気予報を取得する。
    */
-  const getWeather = (e:any) => {
+  const getWeather = (e: React.FormEvent<HTMLFormElement>) => {
 
       e.preventDefault();
 
