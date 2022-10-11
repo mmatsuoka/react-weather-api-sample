@@ -33,16 +33,17 @@ function App() {
       e.preventDefault();
 
       fetch(`https://api.weatherapi.com/v1/current.json?key=420a5465eb6f4f628e0141918220910&q=${city}&aqi=no`)
-      .then(response => response.json() )
-      .then(data => setResults({
-        country: data.location.country,
-        cityName: data.location.name,
-        temperature: data.current.temp_c,
-        conditionText: data.current.condition.text,
-        icon: data.current.condition.icon
+        .then(response => response.json() )
+        .then(data => setResults({
+          country: data.location.country,
+          cityName: data.location.name,
+          temperature: data.current.temp_c,
+          conditionText: data.current.condition.text,
+          icon: data.current.condition.icon
 
-      }))
-      .then(data => console.log(results))
+        }))
+        .then(data => console.log(results))
+      .catch(err => alert("エラー発生。ページをリロードしてやり直してください。") )
   }
 
   return (
